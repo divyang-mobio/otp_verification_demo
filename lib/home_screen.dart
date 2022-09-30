@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: const InputDecoration(hintText: '1357924680'))),
           ),
           Visibility(
-            visible: !otpCodeVisible,
+            visible: otpCodeVisible,
             child: TextFieldPin(
                 margin: 5,
                 codeLength: 6,

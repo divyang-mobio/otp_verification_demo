@@ -9,7 +9,7 @@ class SuccessScreen extends StatelessWidget {
     FirebaseAuth auth = FirebaseAuth.instance;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Success Screen'), actions: [
+      appBar: AppBar(title: const Text('Successful Screen'), actions: [
         IconButton(
             onPressed: () => auth
                 .signOut()
@@ -18,7 +18,7 @@ class SuccessScreen extends StatelessWidget {
       ]),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(height: 200, width: 200, 'assets/success.gif'),
+          Image.asset('assets/success.gif', height: 200, width: 200),
           const Text('Login Successful :)',
               style: TextStyle(fontSize: 30, color: Colors.green))
         ]),
