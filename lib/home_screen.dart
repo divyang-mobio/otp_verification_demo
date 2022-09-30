@@ -56,6 +56,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _phoneNoController.dispose();
+    _passWordController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Otp Verification Screen')),
@@ -90,7 +97,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           MaterialButton(
               onPressed: _buttonOnPress(),
-              child: Text(otpCodeVisible ? 'Verify Otp' : 'Get Otp'))
+              child: Text(otpCodeVisible ? 'Verify Otp' : 'Get Otp')),
+          if (otpCodeVisible)
+            MaterialButton(
+                onPressed: () => sendOtp(),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [Icon(Icons.refresh), Text('Resend')]))
         ]),
       ),
     );
