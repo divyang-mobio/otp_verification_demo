@@ -19,7 +19,7 @@ class SuccessScreen extends StatelessWidget {
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Image.asset(height: 200, width: 200, 'assets/success.gif'),
-          const Text('Success Login',
+          const Text('Login Successful :)',
               style: TextStyle(fontSize: 30, color: Colors.green))
         ]),
       ),

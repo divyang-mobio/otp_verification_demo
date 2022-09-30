@@ -78,21 +78,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: const InputDecoration(hintText: '1357924680'))),
           ),
           Visibility(
-            visible: otpCodeVisible,
+            visible: !otpCodeVisible,
             child: TextFieldPin(
-                margin: 10,
+                margin: 5,
                 codeLength: 6,
                 autoFocus: true,
-                defaultBoxSize: 40.0,
-                selectedBoxSize: 40.0,
+                defaultBoxSize: 45.0,
                 onChange: (code) => setState(() {}),
                 textController: _passWordController,
                 alignment: MainAxisAlignment.center,
-                textStyle: const TextStyle(fontSize: 16),
+                textStyle: const TextStyle(fontSize: 30),
                 defaultDecoration: _pinPutDecoration.copyWith(
-                    border: Border.all(
-                        color:
-                            Theme.of(context).primaryColor.withOpacity(0.6))),
+                    border: Border.all(color: Colors.black)),
                 selectedDecoration: _pinPutDecoration),
           ),
           MaterialButton(

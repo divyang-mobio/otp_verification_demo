@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'OTP Verification Demo',
-        theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+            appBarTheme: const AppBarTheme(centerTitle: true)),
         onGenerateRoute: (route) {
           switch (route.name) {
             case '/':
