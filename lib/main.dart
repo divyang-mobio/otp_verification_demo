@@ -1,6 +1,6 @@
+import 'package:otp_verification_demo/success_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:otp_verification_demo/success_screen.dart';
 import 'home_screen.dart';
 
 void main() async {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'OTP Demo',
+        title: 'OTP Verification Demo',
         theme: ThemeData(primarySwatch: Colors.blue),
         onGenerateRoute: (route) {
           switch (route.name) {
@@ -31,6 +31,6 @@ class MyApp extends StatelessWidget {
                   builder: (context) => const MyHomePage());
           }
         },
-        initialRoute: '/',);
+        initialRoute: '/');
   }
 }
